@@ -3,330 +3,363 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRI Something New — Vibe Coding Hackathon</title>
-    <meta name="description" content="Join TRI's Vibe Coding Hackathon: explore AI-powered tools, build a working solution and turn everyday challenges into practical innovation.">
-    <meta name="theme-color" content="#0A0E14">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+    <title>TRI Something New</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
+<script src="script.js"></script>
 <body>
 
-<a class="skip-link" href="#main">Skip to content</a>
+<!-- WELCOME SCREEN -->
+<section class="hero">
 
-<!-- ============================
-     SITE HEADER / NAVIGATION
-============================= -->
-<header class="site-header">
-    <div class="container site-header__bar">
-        <a class="brand" href="#top">
-            <span class="brand__mark" aria-hidden="true">△</span>
-            TRI <span class="brand__sub">// Vibe Coding</span>
-        </a>
-
-        <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
-        <label for="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
-            <span></span><span></span><span></span>
-        </label>
-
-        <nav class="site-nav" aria-label="Primary">
-            <a href="#why">Why join</a>
-            <a href="#programme">Programme</a>
-            <a href="#timeline">Timeline</a>
-            <a href="#awards">Awards</a>
-            <a class="site-nav__cta" href="https://forms.cloud.microsoft/r/D07GZFaeF5" target="_blank" rel="noopener noreferrer">Register</a>
-        </nav>
+    <!-- Animated background ripples -->
+    <div class="hero-ripples" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
-</header>
 
-<main id="main">
-
-    <!-- ============================
-         HERO
-    ============================= -->
-    <section class="hero" id="top">
-        <div class="hero__field" aria-hidden="true">
-            <svg class="hero__schematic" viewBox="0 0 480 440" fill="none">
-                <path class="schematic__triangle" d="M240 24 L456 404 L24 404 Z" stroke-linejoin="round"/>
-                <circle class="schematic__node" cx="240" cy="24" r="4"/>
-                <circle class="schematic__node" cx="456" cy="404" r="4"/>
-                <circle class="schematic__node" cx="24" cy="404" r="4"/>
-                <path class="schematic__tick" d="M240 4v14M230 24h20"/>
-                <text class="schematic__label" x="252" y="20">Δ 60°</text>
-                <text class="schematic__label" x="378" y="398">02</text>
-                <text class="schematic__label" x="34" y="398">01</text>
-            </svg>
-        </div>
-
-        <div class="container hero__inner">
-            <p class="prompt-line">
-                <span class="prompt-line__prefix">tri/hackathon</span>
-                <span class="prompt-line__arrow">›</span>
-                initiate --vibe-coding
-                <span class="prompt-line__cursor" aria-hidden="true"></span>
-            </p>
-
-            <h1 class="hero__title">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title">
                 <span class="gradient">TRI</span> Something New
             </h1>
 
-            <p class="hero__lead">
-                Turn everyday challenges into opportunities with <span class="gradient">AI</span>.
+            <p class="big-subtitle">
+                Turn challenges into opportunities with
+                <span class="gradient">AI</span>.
             </p>
 
-            <p class="hero__body">
-                Join TRI's Vibe Coding Hackathon to explore AI-powered tools,
-                build practical solutions and discover how innovation can
-                simplify the way we work.
+            <p class="subtitle">
+                Join TRI's Vibe Coding Hackathon to explore AI-powered
+                tools, build practical solutions and discover how
+                innovation can simplify the way we work. 
             </p>
 
-            <div class="hero__actions">
-                <a class="btn btn--primary" href="#programme">
-                    See programme details
-                </a>
-                <a class="btn btn--ghost" href="https://forms.cloud.microsoft/r/D07GZFaeF5" target="_blank" rel="noopener noreferrer">
-                    Register your team
-                </a>
+            <div class="buttons">
+                <button
+                    class="btn"
+                    onclick="document.getElementById('WHY').scrollIntoView({behavior: 'smooth'})"
+                >
+                    More Details
+                </button>
+            </div>
+
+            <div class="scroll-indicator" aria-hidden="true">
+                ↓
             </div>
         </div>
+    </div>
 
-        <a class="scroll-cue" href="#why" aria-label="Scroll to why join">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-        </a>
-    </section>
+</section>
 
-    <!-- ============================
-         WHY JOIN
-    ============================= -->
-    <section class="section why" id="why" aria-labelledby="why-title">
-        <div class="container">
-            <header class="section-head">
-                <p class="eyebrow">// why join</p>
-                <h2 id="why-title">Build. Learn. <span class="gradient">Innovate.</span></h2>
-                <p class="section-head__lead">
-                    Build practical skills, turn ideas into working solutions
-                    and discover new ways to improve how we work.
-                </p>
-            </header>
+<!-- WHY SCREEN -->
+<section class="section why-join" id="WHY" aria-labelledby="why-join-title">
+    <div class="container">
+        <div class="section-heading">
+            <p class="section-label">Discover the possibilities</p>
 
-            <ul class="card-grid" role="list">
-                <li class="card">
-                    <span class="card__icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m2 8 10-5 10 5-10 5-10-5Z"/><path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5"/><path d="M22 8v6"/></svg>
-                    </span>
-                    <h3>Upskill in AI &amp; vibe coding</h3>
-                    <p>Gain hands-on experience using AI-powered development tools.</p>
-                </li>
+            <h2 id="why-join-title">
+                Why Join?<span class="gradient"></span>
+            </h2>
 
-                <li class="card">
-                    <span class="card__icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.8 2.8-2-2 2.8-2.8Z"/></svg>
-                    </span>
-                    <h3>Develop a working solution</h3>
-                    <p>Transform a real business problem into a working digital solution.</p>
-                </li>
-
-                <li class="card">
-                    <span class="card__icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.3h6c0-1 .4-1.8 1-2.3A7 7 0 0 0 12 2Z"/></svg>
-                    </span>
-                    <h3>Strengthen innovation</h3>
-                    <p>Solve problems creatively with a mindset of continuous improvement.</p>
-                </li>
-            </ul>
+            <p class="section-intro">
+                Build practical skills, turn ideas into solutions and discover new ways to improve how we work.
+            </p>
         </div>
-    </section>
 
-    <!-- ============================
-         PROGRAMME OVERVIEW
-    ============================= -->
-    <section class="section overview" id="programme" aria-labelledby="programme-title">
-        <div class="container">
-            <header class="section-head">
-                <p class="eyebrow">// participation</p>
-                <h2 id="programme-title">Programme <span class="gradient">overview</span></h2>
-            </header>
+        <div class="benefit-grid">
+            <article class="benefit-card">
+                <div class="benefit-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m2 8 10-5 10 5-10 5-10-5Z"/><path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5"/><path d="M22 8v6"/></svg>
+                </div>
 
-            <div class="overview-grid">
-                <article class="overview-card overview-card--featured">
-                    <p class="eyebrow eyebrow--tight">Expected participants</p>
-                    <div class="stat">
-                        <span class="stat__number">7</span>
-                        <div>
-                            <h3>Expected teams</h3>
-                            <ul class="team-chips" aria-label="Participating units">
-                                <li>ADMIN</li><li>COMPLC</li><li>DART</li><li>FMT</li>
-                                <li>FRM</li><li>OPRISK</li><li>PMO</li>
-                            </ul>
-                        </div>
+                <h3><span class="gradient">Upskill in AI &amp; Vibe Coding</span></h3>
+
+                <p>
+                    Gain practical experience using AI-powered tools.
+                </p>
+            </article>
+
+            <article class="benefit-card">
+                <div class="benefit-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.8 2.8-2-2 2.8-2.8Z"/></svg>
+                </div>
+
+                <h3><span class="gradient">Develop a Working Solution</span></h3>
+
+                <p>
+                    Transform business problems into digital solutions.
+                </p>
+            </article>
+
+            <article class="benefit-card">
+                <div class="benefit-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.3h6c0-1 .4-1.8 1-2.3A7 7 0 0 0 12 2Z"/></svg>
+                </div>
+
+                <h3><span class="gradient">Strengthen Innovation</span></h3>
+
+                <p>
+                    Solve problems creatively with a mindset of continuous
+                    improvement.
+                </p>
+            </article>
+        </div>
+        <article class="ManualGap" aria-hidden="true">
+                
+        </article>
+            
+    <!--</div>
+</section>
+
+
+ DETAILS SCREEN 
+<section class="details-screen" id="details">
+    <div class="container"> -->
+
+        <!-- PROGRAMME OVERVIEW -->
+        <div class="details-section-heading">
+            <p class="details-kicker">Participation</p>
+
+            <h2>
+                Programme Overview<span class="gradient"></span>
+            </h2>
+
+        </div>
+
+        <div class="overview-grid">
+
+            <!-- Expected participants -->
+            <article class="overview-card overview-card-featured">
+                <p class="card-label">Expected Participants</p>
+
+                <div class="expected-teams">
+                    <span class="expected-number">7</span>
+
+                    <div>
+                        <h3>Expected Teams</h3>
+                        <p>ADMIN, COMPLC, DART, FMT, FRM, OPRISK, PMO</p>
                     </div>
-                </article>
+                </div>
+            </article>
 
-                <article class="overview-card">
-                    <span class="overview-card__icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></svg>
-                    </span>
-                    <p class="eyebrow eyebrow--tight">Participation structure</p>
-                    <h3>Team size</h3>
-                    <p>Team sizes will be determined based on participation from each unit.</p>
-                </article>
+            <!-- Team size -->
+            <article class="overview-card">
+                <span class="card-number" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/></svg>
+                </span>
 
-                <article class="overview-card">
-                    <span class="overview-card__icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3.5 20c0-3 2.5-5.5 5.5-5.5s5.5 2.5 5.5 5.5"/><path d="M14.5 20c.2-2 1.5-3.7 3.2-4.4"/></svg>
-                    </span>
-                    <p class="eyebrow eyebrow--tight">Collaboration</p>
-                    <h3>Team formation</h3>
-                    <p>Participants will form teams within their respective units to develop a practical solution.</p>
-                </article>
+                <p class="card-label">Participation Structure</p>
 
-                <article class="overview-card">
-                    <span class="overview-card__icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11"/><path d="M9 12h11"/><path d="M9 18h11"/><path d="m4 6 1 1 2-2"/><path d="m4 12 1 1 2-2"/><path d="m4 18 1 1 2-2"/></svg>
-                    </span>
-                    <p class="eyebrow eyebrow--tight">Commitment</p>
-                    <h3>Participant expectations</h3>
-                    <ul class="clean-list">
-                        <li>Actively contribute throughout the programme.</li>
-                        <li>Participate in project development.</li>
-                        <li>Contribute to project documentation and the final presentation.</li>
-                    </ul>
-                </article>
-            </div>
-        </div>
-    </section>
+                <h3>Team Size</h3>
 
-    <!-- ============================
-         TENTATIVE TIMELINE
-    ============================= -->
-    <section class="section timeline" id="timeline" aria-labelledby="timeline-title">
-        <div class="container">
-            <header class="section-head">
-                <p class="eyebrow">// key milestones</p>
-                <h2 id="timeline-title">Tentative <span class="gradient">timeline</span></h2>
-                <p class="section-head__lead">
-                    The high-level programme schedule from kick-off to demonstration day.
+                <p>
+                    Team sizes will be determined based on participation
+                    from each unit.
                 </p>
-            </header>
+            </article>
 
-            <ol class="stage-list">
-                <li class="stage">
-                    <span class="stage__marker" aria-hidden="true">01</span>
-                    <div class="stage__content">
-                        <time datetime="2026-08-27">27 August 2026</time>
-                        <h3>Hackathon kick-off</h3>
+            <!-- Team formation -->
+            <article class="overview-card">
+                <span class="card-number" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12 3 7l3-3 5 5"/><path d="M16 12l5-5-3-3-5 5"/><path d="M8 12l2.5 2.5a2 2 0 0 0 2.83 0L16 12"/></svg>
+                </span>
+
+                <p class="card-label">Collaboration</p>
+
+                <h3>Team Formation</h3>
+
+                <p>
+                    Participants will form teams within their respective
+                    units to develop a practical solution.
+                </p>
+            </article>
+
+            <!-- Participant expectations -->
+            <article class="overview-card">
+                <span class="card-number" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6h11"/><path d="M9 12h11"/><path d="M9 18h11"/><path d="m4 6 1 1 2-2"/><path d="m4 12 1 1 2-2"/><path d="m4 18 1 1 2-2"/></svg>
+                </span>
+
+                <p class="card-label">Commitment</p>
+
+                <h3>Participant Expectations</h3>
+
+                <ul class="clean-list">
+                    <li>Actively contribute throughout the programme.</li>
+                    <li>Participate in project development.</li>
+                    <li>
+                        Contribute to project documentation and the final
+                        presentation.
+                    </li>
+                </ul>
+            </article>
+
+        </div>
+
+        <!-- TENTATIVE TIMELINE -->
+        <div class="details-block">
+            <div class="details-section-heading">
+                <p class="details-kicker">Key Milestones</p>
+
+                <h2>
+                    Tentative Timeline<span class="gradient"></span>
+                </h2>
+
+                <p>
+                    The high-level programme schedule from Kick-Off to
+                    Demonstration Day.
+                </p>
+            </div>
+
+            <div class="programme-timeline">
+
+                <!-- Timeline item 1 -->
+                <article class="programme-stage">
+                    <div class="stage-marker" aria-hidden="true">01</div>
+
+                    <div class="stage-content">
+                        <time datetime="2026-08-27">
+                            27 August 2026
+                        </time>
+
+                        <h3>Hackathon Kick-Off</h3>
+
                         <ul class="clean-list">
                             <li>Hackathon briefing</li>
-                            <li>AI and vibe coding workshop</li>
+                            <li>AI and Vibe Coding workshop</li>
                             <li>Project ideas finalised</li>
                         </ul>
                     </div>
-                </li>
+                </article>
 
-                <li class="stage">
-                    <span class="stage__marker" aria-hidden="true">02</span>
-                    <div class="stage__content">
-                        <span class="stage__date">In between</span>
-                        <h3>Project development</h3>
+                <!-- Timeline item 2 -->
+                <article class="programme-stage">
+                    <div class="stage-marker" aria-hidden="true">02</div>
+
+                    <div class="stage-content">
+                        <span class="stage-date">In Between</span>
+
+                        <h3>Project Development</h3>
+
                         <ul class="clean-list">
                             <li>Project development</li>
                             <li>Preparation of project documentation</li>
                             <li>Preparation of presentation materials</li>
                         </ul>
                     </div>
-                </li>
+                </article>
 
-                <li class="stage">
-                    <span class="stage__marker" aria-hidden="true">03</span>
-                    <div class="stage__content">
-                        <time datetime="2026-09-30">30 September 2026</time>
-                        <h3>Demonstration day</h3>
+                <!-- Timeline item 3 -->
+                <article class="programme-stage">
+                    <div class="stage-marker" aria-hidden="true">03</div>
+
+                    <div class="stage-content">
+                        <time datetime="2026-09-30">
+                            30 September 2026
+                        </time>
+
+                        <h3>Demonstration Day</h3>
+
                         <ul class="clean-list">
                             <li>Final project presentation</li>
                             <li>Judges' evaluation</li>
                             <li>Awards and closing</li>
                         </ul>
                     </div>
-                </li>
-            </ol>
+                </article>
 
-            <p class="tentative-note">Programme dates and activities are tentative and may be adjusted.</p>
+            </div>
+
+            <p class="tentative-note">
+                Programme dates and activities are tentative and may be adjusted.
+            </p>
         </div>
-    </section>
 
-    <!-- ============================
-         AWARDS & REGISTRATION
-    ============================= -->
-    <section class="section awards" id="awards" aria-labelledby="awards-title">
-        <div class="container">
-            <header class="section-head">
-                <p class="eyebrow">// recognition</p>
-                <h2 id="awards-title">Hackathon <span class="gradient">awards</span></h2>
-                <p class="section-head__lead">
+        <!-- AWARDS -->
+        <div class="details-block awards-block">
+            <div class="details-section-heading">
+                <p class="details-kicker">Recognition</p>
+
+                <h2>
+                     Hackathon Awards<span class="gradient"></span>
+                </h2>
+
+                <p>
                     Celebrating strong communication, collaboration and meaningful solutions.
                 </p>
-            </header>
+            </div>
 
-            <ul class="card-grid" role="list">
-                <li class="card">
-                    <span class="card__icon" aria-hidden="true">
+            <div class="awards-grid">
+
+                <article class="award-card">
+                    <span class="award-icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v4"/><path d="M9 22h6"/></svg>
                     </span>
-                    <p class="eyebrow eyebrow--tight">Individual</p>
+
+                    <p class="card-label">Individual</p>
+
                     <h3>Best Presenter Award</h3>
-                    <p>Recognising the participant who delivers the clearest and most engaging project presentation.</p>
-                </li>
 
-                <li class="card">
-                    <span class="card__icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12 3 7l3-3 5 5"/><path d="M16 12l5-5-3-3-5 5"/><path d="M8 12l2.5 2.5a2 2 0 0 0 2.83 0L16 12"/></svg>
+                    <p>
+                        Recognising the participant who delivers the clearest
+                        and most engaging project presentation.
+                    </p>
+                </article>
+
+                <article class="award-card">
+                    <span class="award-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3.5 20c0-3 2.5-5.5 5.5-5.5s5.5 2.5 5.5 5.5"/><path d="M14.5 20c.2-2 1.5-3.7 3.2-4.4"/></svg>
                     </span>
-                    <p class="eyebrow eyebrow--tight">Group</p>
-                    <h3>Best Team Collaboration</h3>
-                    <p>Recognising the team that demonstrates strong cooperation, contribution and shared ownership.</p>
-                </li>
 
-                <li class="card">
-                    <span class="card__icon" aria-hidden="true">
+                    <p class="card-label">Group</p>
+
+                    <h3>Best Team Collaboration</h3>
+
+                    <p>
+                        Recognising the team that demonstrates strong
+                        cooperation, contribution and shared ownership.
+                    </p>
+                </article>
+
+                <article class="award-card">
+                    <span class="award-icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>
                     </span>
-                    <p class="eyebrow eyebrow--tight">Project</p>
-                    <h3>Most Impactful Project</h3>
-                    <p>Recognising the solution with the strongest potential to create meaningful improvements.</p>
-                </li>
-            </ul>
 
-            <div class="gift-banner">
-                <span class="gift-banner__icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7"/><path d="M12 8c-1.5 0-3-1-3-2.5S10.5 3 12 4.5C13.5 3 15 3.5 15 5.5S13.5 8 12 8Z"/></svg>
-                </span>
+                    <p class="card-label">Project</p>
+
+                    <h3>Most Impactful Project</h3>
+
+                    <p>
+                        Recognising the solution with the strongest potential
+                        to create meaningful improvements.
+                    </p>
+                </article>
+
+            </div>
+
+            <div class="participant-gift">
+                <div class="gift-icon" aria-hidden="true">✦</div>
+
                 <p>
-                    All participants will receive a new <strong>TRI Lanyard</strong>
-                    and <strong>PVC Participant Card</strong> as a token of appreciation
+                    All participants will receive a new 
+                    <strong>TRI Lanyard</strong> and
+                    <strong>PVC Participant Card</strong> as a token of appreciation
                     for their participation.
                 </p>
             </div>
-
-            <div class="register-cta">
-                <a class="btn btn--primary btn--lg" href="https://forms.cloud.microsoft/r/D07GZFaeF5" target="_blank" rel="noopener noreferrer">
-                    Register now
-                </a>
+            <div class="buttons award-buttons">
+                <button
+                    class="btn"
+                    type="button"
+                    onclick="window.open('https://forms.cloud.microsoft/r/D07GZFaeF5', '_blank', 'noopener, noreferrer')"
+                    > Register Now!</button>
             </div>
         </div>
-    </section>
 
-</main>
-
-<footer class="site-footer">
-    <div class="container site-footer__inner">
-        <p><span class="brand__mark" aria-hidden="true">△</span> TRI Something New — Vibe Coding Hackathon</p>
-        <p class="site-footer__note">Dates and details are tentative and may be adjusted.</p>
     </div>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
+</section>
