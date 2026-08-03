@@ -175,6 +175,7 @@ body{
     color:rgba(255,255,255,.5);
     font-size:1.8rem;
     animation:float 2s ease-in-out infinite;
+    margin-bottom:30px;
 }
 .ManualGap{
     margin-top:50px;
@@ -200,101 +201,36 @@ body{
     }
 }
 
-/* ANIMATED HERO RIPPLES */
-
-.hero-ripples {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    width: 280px;
-    height: 190px;
-
-    transform: translate(-50%, -50%);
-
-    z-index: 0;
-    pointer-events: none;
-    overflow: visible;
+/* Vanta Waves background */
+.hero {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
 }
 
-.hero-ripples span {
-    position: absolute;
-    inset: 0;
-
-    /* Uneven ellipse without animating border-radius */
-    border-radius: 48% 52% 46% 54% / 55% 45% 58% 42%;
-
-    border: 2px solid rgba(56, 189, 248, 0.45);
-
-    opacity: 0;
-
-    /* Only animate transform and opacity */
-    animation: waterRippleOptimized 12s linear infinite;
-
-    /* Browser performance hints */
-    will-change: transform, opacity;
-    transform: translate3d(0, 0, 0) scale(0.4);
-    backface-visibility: hidden;
+/* Keep the Vanta canvas at the back */
+.hero > canvas {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
 }
 
-/* Stagger each ripple */
-
-.hero-ripples span:nth-child(1){
-    animation-delay: 0s;
+/* TRI triangle stays above Vanta Waves */
+.hero::before {
+    z-index: 1;
 }
 
-.hero-ripples span:nth-child(2) {
-    animation-delay: 2.5s;
-    border-color: rgba(139, 92, 246, 0.65);
-}
-
-.hero-ripples span:nth-child(3) {
-   animation-delay: 5s;
-}
-
-.hero-ripples span:nth-child(4) {
-    animation-delay: 7.5s;
-    border-color: rgba(139, 92, 246, 0.65);
-}
-
-@keyframes waterRippleOptimized {
-    0% {
-        transform:
-            translate3d(0, 0, 0)
-            scale3d(0.4, 0.35, 1)
-            rotate(0deg);
-
-        opacity: 0;
-    }
-
-    15% {
-        opacity: 0.55;
-    }
-
-    65% {
-        opacity: 0.2;
-    }
-
-    100% {
-        transform:
-            translate3d(8px, -5px, 0)
-            scale3d(5.5, 5, 1)
-            rotate(8deg);
-
-        opacity: 0;
-    }
+/* Hero text and buttons stay above everything */
+.hero .container {
+    position: relative;
+    z-index: 2;
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .hero-ripples span,
     .hero::before,
     .hero,
     .scroll-indicator {
-        animation:none;
-    }
-
-    .hero-ripples {
-       opacity: 0.25;
+        animation: none;
     }
 }
 
