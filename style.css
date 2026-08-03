@@ -34,10 +34,17 @@ body{
 .hero {
     min-height: 100vh;
 
+    /* Layered glow: a soft top-right violet wash, a cooler blue wash
+       bottom-left, a warm center glow behind the title, and a subtle
+       vertical vignette so the edges recede. */
     background:
-        radial-gradient(circle at top right, rgba(139, 92, 246, .25), transparent 35%),
-        radial-gradient(circle at bottom left, #38bdf840, transparent 35%),
-        #050816;
+        radial-gradient(ellipse 55% 45% at 82% 12%, rgba(139, 92, 246, 0.32), transparent 60%),
+        radial-gradient(ellipse 60% 50% at 12% 88%, rgba(56, 189, 248, 0.26), transparent 60%),
+        radial-gradient(ellipse 65% 55% at 50% 42%, rgba(56, 189, 248, 0.14), transparent 65%),
+        linear-gradient(165deg, #060a18 0%, #050816 45%, #0a0f24 100%);
+    background-size: 200% 200%, 200% 200%, 160% 160%, 100% 100%;
+    background-position: 0% 0%, 100% 100%, 50% 50%, 0 0;
+    animation: heroGlowDrift 20s ease-in-out infinite alternate;
 
     display: flex;
     justify-content: center;
@@ -48,6 +55,15 @@ body{
     /* Prevent the background image from overflowing the hero */
     overflow: hidden;
     isolation: isolate;
+}
+
+@keyframes heroGlowDrift {
+    0% {
+        background-position: 0% 0%, 100% 100%, 46% 40%, 0 0;
+    }
+    100% {
+        background-position: 8% 10%, 92% 90%, 54% 46%, 0 0;
+    }
 }
 
 .hero::before {
@@ -272,6 +288,7 @@ body{
 @media (prefers-reduced-motion: reduce) {
     .hero-ripples span,
     .hero::before,
+    .hero,
     .scroll-indicator {
         animation:none;
     }
@@ -460,6 +477,12 @@ body{
     font-size: 0.9rem;
     font-weight: 800;
     letter-spacing: 0.08em;
+}
+
+.benefit-icon svg {
+    width: 28px;
+    height: 28px;
+    color: var(--blue);
 }
 
 .benefit-card h3 {
@@ -651,6 +674,11 @@ body{
     font-weight: 800;
 }
 
+.card-number svg {
+    width: 24px;
+    height: 24px;
+}
+
 .card-label {
     margin: 0 0 9px;
     color: var(--blue);
@@ -840,6 +868,11 @@ body{
     color: white;
     font-size: 0.8rem;
     font-weight: 800;
+}
+
+.award-icon svg {
+    width: 24px;
+    height: 24px;
 }
 
 .award-card h3 {
