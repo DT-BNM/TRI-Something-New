@@ -178,9 +178,7 @@ body{
     margin-bottom:30px;
 }
 .ManualGap{
-    margin-top:50px;
     margin-top: 150px;
-    
 }
 
 @keyframes float{
@@ -559,6 +557,38 @@ body{
         );
 }
 
+.why-works-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* Central Business Question callout (Capstone Project) */
+.business-question {
+    max-width: 820px;
+    margin: 0 auto 40px;
+    padding: 32px 38px;
+    text-align: center;
+    border: 1px solid rgba(139, 92, 246, 0.28);
+    border-radius: 22px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(56, 189, 248, 0.08),
+            rgba(139, 92, 246, 0.08)
+        );
+}
+
+.business-question .card-label {
+    justify-content: center;
+}
+
+.business-question > p:last-child {
+    margin: 0;
+    color: var(--text);
+    font-size: 1.15rem;
+    line-height: 1.75;
+    font-style: italic;
+}
+
 .expected-teams {
     display: flex;
     align-items: center;
@@ -769,7 +799,7 @@ body{
 
 .awards-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 22px;
 }
 
@@ -781,6 +811,31 @@ body{
     transition:
         transform 0.25s ease,
         border-color 0.25s ease;
+}
+
+.award-card-featured {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    max-width: 900px;
+    margin: 0 auto 22px;
+    padding: 34px 38px;
+    border-color: rgba(56, 189, 248, 0.3);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(56, 189, 248, 0.1),
+            rgba(139, 92, 246, 0.1)
+        );
+}
+
+.award-card-featured .award-icon {
+    flex: 0 0 54px;
+    margin-bottom: 0;
+}
+
+.award-card-featured h3 {
+    font-size: clamp(1.5rem, 3vw, 1.9rem);
 }
 
 .award-card:hover {
@@ -877,6 +932,15 @@ body{
     .overview-card-featured {
         grid-column: auto;
     }
+
+    .why-works-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .award-card-featured {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 @media (max-width: 768px) {
@@ -946,6 +1010,10 @@ body{
     .participant-gift {
         align-items: flex-start;
         padding: 22px;
+    }
+
+    .business-question {
+        padding: 26px 24px;
     }
 }
 .award-buttons {
