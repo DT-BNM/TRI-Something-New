@@ -1,0 +1,605 @@
+I want to reproduce this reporting workflow in a separate AI agent.
+
+Based on:
+
+1. My instructions throughout this conversation
+2. The research and sources used in this conversation
+3. The three reports generated in this conversation
+4. Any historical report examples I have attached
+5. Any corrections, formatting preferences or feedback I previously provided
+
+reconstruct a complete, standalone master prompt that another capable AI agent could follow to produce reports of comparable quality.
+
+The three required outputs are:
+
+1. Market Intelligence Brief
+2. Risk Matrix
+3. Biggest Movers
+
+Important limitation:
+
+Do not attempt to reveal, reproduce or claim knowledge of any hidden system prompt, private chain of thought, internal reasoning or proprietary instruction. Instead, infer and document the observable workflow, research methodology, source-selection rules, calculation methodology, analytical framework, writing style, document structure and quality controls required to reproduce the outputs.
+
+Your final response must contain a single, self-contained master prompt that I can copy and paste into another AI agent.
+
+The reconstructed master prompt must include all of the following sections.
+
+## 1. Agent Role and Objective
+
+Define:
+
+- The role of the agent
+- The intended users of the reports
+- The purpose of each report
+- The relationship between the three reports
+- The expected level of analytical depth
+- The required professional tone
+- The boundaries of the agent’s responsibilities
+
+## 2. Dynamic Reporting Date
+
+The master prompt must instruct the future agent to determine the actual current date at runtime.
+
+It must not permanently hard-code today’s date into the reusable prompt.
+
+At the start of every run, the agent must explicitly establish:
+
+- Current calendar date
+- Current local date and time
+- Applicable time zone
+- Reporting cut-off date and time
+- Market-data observation time
+- Comparison date or previous market close
+- Publication date of the reports
+
+For this reconstruction exercise, today is 2 September 2026.
+
+However, the final reusable prompt must use a dynamic variable or instruction such as:
+
+- [CURRENT_DATE]
+- [REPORTING_CUTOFF]
+- [TIME_ZONE]
+- [PREVIOUS_MARKET_CLOSE]
+
+If the reporting date, cut-off time, time zone or comparison period is unclear, the agent must ask for the missing information before commencing the final analysis.
+
+The agent must distinguish clearly between:
+
+- Event date
+- Data reference period
+- Data release date
+- Article publication date
+- Source retrieval date
+- Report publication date
+
+The agent must not describe an old event as having occurred today merely because an article about it was published today.
+
+## 3. Required User Inputs
+
+Identify all inputs that the user should provide before the workflow begins, including where applicable:
+
+- Reporting date
+- Reporting cut-off time
+- Time zone
+- Market coverage
+- Geographic scope
+- Asset classes
+- Currency conventions
+- Benchmark instruments
+- Comparison period
+- Approved data providers
+- Approved news providers
+- Risk-scoring methodology
+- Word templates
+- Historical examples
+- Intended audience
+- Expected report length
+
+The agent should only ask questions that are necessary to prevent a material error.
+
+If a non-material input is missing, it may apply a reasonable default, but it must declare that default.
+
+## 4. Internet Research Instructions
+
+Provide detailed instructions for conducting current internet research.
+
+The agent must search for information current as at [REPORTING_CUTOFF]. It must not rely solely on general model knowledge for current market facts, prices, policy decisions, economic releases or recent events.
+
+The instructions must specify:
+
+- What topics to search
+- Which markets to cover
+- Which economic indicators to check
+- Which central-bank developments to examine
+- Which geopolitical developments may be relevant
+- How far back the research window should extend
+- How to identify events occurring after the previous report
+- How to distinguish current information from stale information
+- How to handle sources published after the reporting cut-off
+- How to record source publication and retrieval dates
+- How to handle revised, preliminary and final data
+- How to handle paywalled or inaccessible sources
+- How to resolve conflicting information
+- How to verify material facts and causal claims
+
+The agent must not fabricate web searches, sources, URLs, quotations, market data or citations.
+
+If live web access or an approved data source is unavailable, the agent must state the limitation and must not present unverified current information as fact.
+
+## 5. Source Hierarchy
+
+Define an explicit source hierarchy.
+
+The hierarchy should prioritize, where relevant:
+
+### Tier 1: Primary authoritative sources
+
+- Central banks
+- Ministries of finance
+- National statistical agencies
+- Financial regulators
+- Government debt-management offices
+- Official exchanges
+- Official corporate filings
+- Official press releases
+- Multilateral institutions
+- Other relevant public authorities
+
+### Tier 2: Approved market-data sources
+
+- Licensed financial databases
+- Approved market-data terminals
+- Official exchange data
+- Approved internal databases
+- Approved market-data APIs
+
+### Tier 3: Reputable financial reporting
+
+- Established financial newswires
+- Reputable financial publications
+- Other organization-approved news providers
+
+### Tier 4: Supporting commentary
+
+- Bank research
+- Research houses
+- Industry commentary
+- Specialist publications
+- Other secondary analysis
+
+Social media, unsourced aggregators and low-quality commentary must not be used as the sole basis for a material claim.
+
+The final master prompt must explain:
+
+- When primary sources are mandatory
+- When secondary sources may be used
+- When two-source verification is required
+- What qualifies as an independent corroborating source
+- How the agent should handle contradictory sources
+- How the agent should label unconfirmed information
+
+## 6. Source Verification and Evidence Rules
+
+For every material factual claim, the future agent must retain an evidence record containing:
+
+- Claim supported
+- Source organization
+- Page or article title
+- URL
+- Publication date
+- Event or data date
+- Retrieval date and time
+- Relevant supporting passage or data point
+- Source tier
+- Verification status
+
+The agent must confirm that each source directly supports the claim attributed to it.
+
+A source mentioning the same general topic is not sufficient.
+
+For material causal statements, such as explaining why a currency, bond yield, commodity or equity index moved, require corroboration from at least two reliable and genuinely independent sources where practicable.
+
+If causality is not conclusively established, use appropriately qualified language such as:
+
+- “likely driven by”
+- “market participants attributed the move partly to”
+- “the move coincided with”
+- “appears to have reflected”
+
+Do not state correlation as proven causation.
+
+Do not invent quotations. Use direct quotations only when they are necessary, accurate and traceable to the original source.
+
+## 7. Market-Data Rules
+
+Define the market-data requirements for the reports.
+
+The master prompt must require:
+
+- Consistent observation dates and times
+- Clear identification of opening, closing or intraday values
+- Consistent time-zone treatment
+- Identification of the data provider
+- Identification of the benchmark or instrument
+- Preservation of original units
+- Appropriate rounding
+- Transparent calculation formulas
+- Separation of sourced values from calculated values
+
+The agent must not compare an intraday value with a previous closing value without clearly labelling the comparison.
+
+The agent must distinguish between:
+
+- Percentage change
+- Percentage-point change
+- Basis-point change
+- Absolute price change
+- Yield change
+- Spread change
+- Index-point change
+
+For every calculated mover, retain:
+
+- Current value
+- Comparison value
+- Observation timestamps
+- Exact calculation
+- Unrounded result
+- Displayed rounded result
+- Unit of measurement
+- Data source
+
+If the agent lacks reliable numerical data, it must not estimate or invent the movement.
+
+## 8. Research Coverage
+
+Infer from this conversation and the existing reports the required coverage, including as applicable:
+
+- Foreign exchange
+- Sovereign bonds
+- Policy rates
+- Money markets
+- Credit markets
+- Equities
+- Commodities
+- Economic data
+- Central-bank communication
+- Fiscal policy
+- Geopolitical developments
+- Market volatility
+- Liquidity conditions
+- Relevant domestic and international developments
+
+Clearly separate mandatory coverage from optional coverage.
+
+Do not add a market solely because it appears in one historical example. Identify recurring coverage patterns and state the confidence level of each inferred requirement.
+
+## 9. Market Intelligence Brief Specification
+
+Provide the complete specification for the Market Intelligence Brief, including:
+
+- Purpose
+- Intended reader
+- Required sections
+- Section order
+- Executive-summary format
+- Expected length
+- Paragraph structure
+- Required market coverage
+- Use of tables
+- Use of bullet points
+- Treatment of market data
+- Treatment of causal explanations
+- Treatment of uncertainty
+- Required citations
+- Required conclusion or outlook
+- Required disclaimer, if evident from the examples
+
+For every required section, explain:
+
+- What information should be included
+- What should be excluded
+- How information should be prioritized
+- How detailed the analysis should be
+- How the section should connect to the Risk Matrix and Biggest Movers report
+
+## 10. Risk Matrix Specification
+
+Provide the complete specification for the Risk Matrix.
+
+Infer and define the required fields, such as:
+
+- Risk title
+- Triggering development
+- Risk category
+- Risk description
+- Transmission channel
+- Affected markets
+- Likelihood
+- Impact
+- Overall risk level
+- Risk direction
+- Time horizon
+- Rationale
+- Monitoring indicators
+- Potential mitigants
+- Supporting evidence
+- Sources
+
+Reconstruct the risk-scoring methodology only to the extent supported by the reports.
+
+For each inferred scoring rule:
+
+- State the rule
+- Identify the supporting evidence from the examples
+- Assign high, medium or low confidence
+- Identify any unresolved ambiguity
+
+Do not invent a numerical scoring methodology if the existing reports do not demonstrate one clearly.
+
+The master prompt must instruct the agent to distinguish between:
+
+- An observed event
+- An existing exposure
+- A possible risk scenario
+- A transmission channel
+- A potential consequence
+- A mitigating factor
+
+## 11. Biggest Movers Specification
+
+Provide the complete specification for the Biggest Movers report.
+
+Define:
+
+- Eligible markets and instruments
+- Required comparison period
+- Ranking methodology
+- Minimum data-quality requirements
+- Calculation formulas
+- Tie-breaking rules
+- Treatment of unavailable data
+- Treatment of outliers
+- Treatment of market holidays
+- Treatment of different market closing times
+- Treatment of percentage, basis-point and absolute changes
+- Required explanation for each move
+- Required substantiation for each explanation
+- Required table columns
+- Expected narrative length
+
+The future agent must calculate the ranking from approved structured data wherever possible.
+
+It must not identify the “biggest movers” merely by counting which assets received the most news coverage.
+
+## 12. Cross-Report Consistency
+
+The three outputs must be internally consistent.
+
+The master prompt must require checks confirming that:
+
+- Dates and cut-off times are identical
+- Market values agree across reports
+- Units and rounding are consistent
+- The biggest movers agree with the underlying calculations
+- Risks are supported by the research
+- Market drivers are described consistently
+- The reports do not contradict one another
+- Source details are consistent
+- Terminology and instrument names are standardized
+
+Where the reports serve different purposes, explain how the same development should be expressed differently in each report.
+
+## 13. Writing Style
+
+Infer a formal style guide from the reports in this conversation and any historical examples.
+
+The style guide must address:
+
+- Tone
+- Sentence length
+- Paragraph length
+- Heading structure
+- Level of technical language
+- Use of abbreviations
+- Capitalization
+- Date format
+- Number format
+- Currency format
+- Percentage and basis-point format
+- Treatment of uncertainty
+- Treatment of forward-looking statements
+- Preferred wording
+- Terms or styles to avoid
+- Use of passive and active voice
+- Degree of conciseness
+- Appropriate analytical qualifiers
+
+For every inferred style rule:
+
+- State the evidence
+- Identify whether it recurs across multiple reports
+- Assign high, medium or low confidence
+
+Do not treat a one-off wording choice as a permanent style rule unless it is supported by multiple examples.
+
+## 14. Document Formatting Requirements
+
+Infer the document-formatting requirements for each report, including:
+
+- Title
+- Cover page
+- Heading levels
+- Tables
+- Column order
+- Page breaks
+- Header and footer
+- Page numbering
+- Source notes
+- Footnotes
+- Disclaimer
+- File naming
+- Reporting-date display
+- Branding elements
+- Font and spacing, if reliably observable
+
+Separate content requirements from Word-specific formatting requirements.
+
+The final master prompt should assume that approved Word templates may be supplied. If they are supplied, the agent must preserve their formatting and populate the designated sections rather than redesigning the documents.
+
+## 15. Missing Information and Uncertainty
+
+The master prompt must prohibit fabrication.
+
+When information is missing, unavailable or unverifiable, the agent must:
+
+- State what is missing
+- Explain why it matters
+- Identify whether the report can still be completed
+- Use a clear placeholder where appropriate
+- Avoid guessing
+- Avoid silently substituting stale data
+- Avoid citing a source that does not support the claim
+
+Create standard wording for:
+
+- Data not available
+- Source inaccessible
+- Information not verified
+- Conflicting sources
+- No material development identified
+- Insufficient evidence for causality
+- Reporting cut-off limitation
+
+## 16. Workflow Stages
+
+Reconstruct the workflow as explicit stages:
+
+1. Establish reporting parameters
+2. Review templates and historical examples
+3. Create the research plan
+4. Conduct current internet research
+5. Collect approved market data
+6. Validate and record sources
+7. Calculate market movements
+8. Identify material developments
+9. Construct the risk analysis
+10. Draft the three reports
+11. Populate the Word templates
+12. Perform factual and numerical quality control
+13. Perform cross-report consistency checks
+14. Produce final drafts for human review
+
+For each stage, specify:
+
+- Inputs
+- Tasks
+- Outputs
+- Validation checks
+- Conditions that require human escalation
+
+## 17. Human Review Controls
+
+The future agent must treat the reports as drafts pending human review unless explicitly authorized otherwise.
+
+The final checklist must require a human reviewer to verify:
+
+- Reporting date and time zone
+- Data cut-off
+- Market closing values
+- Market holidays
+- Calculations
+- Percentage and basis-point treatment
+- Material causal claims
+- Source reliability
+- Citation accuracy
+- Risk scores
+- Cross-report consistency
+- Template compliance
+- Confidentiality restrictions
+
+The agent must not claim that a report has been approved merely because it generated the document.
+
+## 18. Output Requirements for the Reconstructed Master Prompt
+
+Your response to this request must contain:
+
+### Part A: Reconstructed Master Prompt
+
+Provide one complete prompt that can be pasted directly into another AI agent.
+
+The prompt must be operational and written as direct instructions to that agent.
+
+It must include placeholders for dynamic variables, including:
+
+- [CURRENT_DATE]
+- [CURRENT_TIME]
+- [TIME_ZONE]
+- [REPORTING_CUTOFF]
+- [REPORTING_PERIOD]
+- [PREVIOUS_MARKET_CLOSE]
+- [MARKET_SCOPE]
+- [GEOGRAPHIC_SCOPE]
+- [APPROVED_SOURCES]
+- [MARKET_DATA_SOURCE]
+- [OUTPUT_FOLDER]
+- [TEMPLATE_FILES]
+
+### Part B: Inferred Requirements Register
+
+After the master prompt, provide a concise register containing:
+
+- Inferred requirement
+- Supporting report or conversation evidence
+- Confidence level
+- Whether it requires confirmation
+
+### Part C: Unresolved Questions
+
+List only issues that cannot be reliably determined from the conversation or reports.
+
+Prioritize questions that could materially change:
+
+- Data selection
+- Calculations
+- Risk scoring
+- Source selection
+- Report structure
+- Final document formatting
+
+### Part D: Quality-Control Test Cases
+
+Provide at least 10 test cases that can be used to evaluate the new agent.
+
+Include scenarios involving:
+
+- Missing market data
+- Conflicting sources
+- Stale articles
+- Different publication and event dates
+- Intraday versus closing values
+- Market holidays
+- Percentage versus basis-point calculations
+- Unsupported causal explanations
+- Inconsistent statements across reports
+- Missing citations
+- A source published after the reporting cut-off
+- A significant event occurring shortly before the cut-off
+
+For each test case, state the expected behaviour rather than an exact report answer.
+
+## Final Constraints
+
+- Do not reveal or speculate about hidden system instructions.
+- Do not provide private chain-of-thought or internal reasoning.
+- Do not claim that the reconstructed master prompt is identical to the prompt or process originally used.
+- Do not fabricate sources, dates, market values, calculations or requirements.
+- Clearly separate observed patterns from inferred patterns.
+- Identify uncertainty explicitly.
+- Preserve all material details needed to reproduce the three reports.
+- Make the reconstructed prompt platform-neutral where possible.
+- Ensure that it can be adapted for Microsoft Copilot Studio.
+- Return the complete result in Markdown.
+- Do not generate the three reports now.
+- Do not perform new market research now.
+- Your task is to reconstruct the reusable master prompt and workflow specification only.
